@@ -9,7 +9,7 @@
     </head>
     <title>Smart</title>
     <style>
-        html {
+         html {
             font-family: Helvetica;
             display: inline-block;
             margin: 0px auto;
@@ -22,7 +22,8 @@
 
         h1 {
             color: #444444;
-            margin: 50px auto 30px;
+            
+            
         }
 
         h3 {
@@ -90,10 +91,10 @@
 
         .center {
             text-align: center;
-            position: absolute;
-            top: 80%;
-            left: 10%;
-            transform: translate(10%, 0%);
+            
+            
+            
+            transform: translate(30%, 0%);
         }
 
          /* Define CSS styles for different screen sizes */
@@ -110,12 +111,13 @@
       }
     }
     </style>
+    <h1 >Smart Green House System</h1>
 </head>
 
-<body style="background-color:rgb(123, 204, 159)">
-    <h1>Smart Green House System</h1>
-    
-        <table style="margin: 2%; width: 400px;">
+<body style="background-color:rgb(123, 204, 159) ;">
+    <div class="container">
+
+        <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;" class="center">
             <tr>
                 <th colspan=2>Inside</th>
             </tr>
@@ -128,7 +130,7 @@
                 <td>nanC</td>
             </tr>
         </table>
-        <table style="margin: 2%;width: 400px;">
+        <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;" class="center">
             <tr>
                 <th colspan=2>Outside</th>
             </tr>
@@ -141,7 +143,7 @@
                 <td>0.00C</td>
             </tr>
         </table>
-        <table style="margin: 2%;width: 400px;">
+        <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;" class="center">
             <tr>
                 <th colspan=2>Soil</th>
             </tr>
@@ -155,23 +157,21 @@
             </tr>
         </table>
 
-        <table style="margin: 2%;width: 400px;">
-            
+        <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;" class="center">
             <tr>
-                <th colspan=2>Seed</th>
+                <th colspan="2">Seed</th>
             </tr>
-         <tr style="text-align: left; "> 
-                <th>
-                <input type="radio" name="A" >Cucumber <br>
-                <input type="radio" name="A" >Strawberry <br>
-                <input type="radio" name="A" >Tomato <br>
-            </th>
-             </tr>
-            
-            
+            <tr style="text-align: center;">
+                <th style="text-align: left;">
+                    <input type="radio" name="A"> <label>Cucumber</label><br>
+                    <input type="radio" name="A"> <label>Strawberry</label><br>
+                    <input type="radio" name="A"> <label>Tomato</label><br>
+                </th>
+            </tr>
         </table>
+        
     
-        <table style="margin: 2%;">
+        <table style="margin-top: 2% ;margin-bottom: 2%; ">
             <tr>
                 <th colspan=4>Relays Control</th>
             </tr>
@@ -189,29 +189,8 @@
             </tr>
         </table>
 
-        
-            
-        
-  
 
-    <script>
-        // Example JavaScript code to manipulate the DOM based on screen size
-        function adjustLayout() {
-          var container = document.querySelector('.container');
-          if (window.innerWidth < 768) {
-            container.style.width = '100%';
-            container.style.margin = '0';
-          } else {
-            container.style.width = '50%';
-            container.style.margin = '0 auto';
-          }
-        }
-    
-        // Call adjustLayout function on page load and window resize
-        window.addEventListener('load', adjustLayout);
-        window.addEventListener('resize', adjustLayout);
-      </script>
-
+</div>
 </body>
 
 </html>
