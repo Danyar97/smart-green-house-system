@@ -6,10 +6,11 @@
 
     <head>
         <meta http-equiv="refresh" content="5">
+
     </head>
     <title>Smart</title>
     <style>
-         html {
+        html {
             font-family: Helvetica;
             display: inline-block;
             margin: 0px auto;
@@ -18,12 +19,12 @@
 
         body {
             margin-top: 50px;
+            background-color: bisque;
         }
 
         h1 {
             color: #444444;
-            
-            
+            margin: 50px auto 30px;
         }
 
         h3 {
@@ -90,34 +91,122 @@
         }
 
         .center {
-            text-align: center;
-            
-            
-            
-            transform: translate(30%, 0%);
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
         }
 
-         /* Define CSS styles for different screen sizes */
-    .container {
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+        .container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
 
-    @media (min-width: 768px) {
-      .container {
-        width: 50%;
-        margin: 0 auto;
-      }
-    }
+        .center>table {
+            margin-top: 10px;
+        }
+
+        .text-container>h1 {
+            font-size: 40px;
+        }
+
+        .title-word {
+            animation: color-animation 4s linear infinite;
+        }
+
+        .title-word-1 {
+            --color-1: #DF8453;
+            --color-2: #3D8DAE;
+            --color-3: #E4A9A8;
+        }
+
+        .title-word-2 {
+            --color-1: #DBAD4A;
+            --color-2: #ACCFCB;
+            --color-3: #17494D;
+        }
+
+        .title-word-3 {
+            --color-1: #089637;
+            --color-2: #7d9b71;
+            --color-3: #739c81;
+        }
+
+        .title-word-4 {
+            --color-1: #3D8DAE;
+            --color-2: #DF8453;
+            --color-3: #E4A9A8;
+        }
+
+        @keyframes color-animation {
+            0% {
+                color: var(--color-1)
+            }
+
+            32% {
+                color: var(--color-1)
+            }
+
+            33% {
+                color: var(--color-2)
+            }
+
+            65% {
+                color: var(--color-2)
+            }
+
+            66% {
+                color: var(--color-3)
+            }
+
+            99% {
+                color: var(--color-3)
+            }
+
+            100% {
+                color: var(--color-1)
+            }
+        }
+
+        /* Here are just some visual styles. 🖌 */
+
+        .containert {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            height: 100px
+        }
+
+        .titlet {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 80;
+            font-size: 60px;
+            text-transform: uppercase;
+        }
     </style>
-    <h1 >Smart Green House System</h1>
+
 </head>
 
-<body style="background-color:rgb(123, 204, 159) ;">
-    <div class="container">
+<body>
 
-        <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;" class="center">
+    <section class="text-container">
+        <div class="containert">
+            <label class="titlet">
+                <span class="title-word title-word-1">Smart</span>
+                <span class="title-word title-word-2">Green</span>
+                <span class="title-word title-word-3">House</span>
+                <span class="title-word title-word-4">System</span>
+            </label>
+        </div>
+        <br>
+
+        <h2>Date 2023/6/24</h2>
+        <h2>Time 1:19:43</h2>
+
+    </section>
+    <div class=container>
+
+        <table>
             <tr>
                 <th colspan=2>Inside</th>
             </tr>
@@ -126,11 +215,11 @@
                 <th>Temprature</th>
             </tr>
             <tr>
-                <td>nan%</td>
-                <td>nanC</td>
+                <td>52.50%</td>
+                <td>27.70C</td>
             </tr>
         </table>
-        <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;" class="center">
+        <table>
             <tr>
                 <th colspan=2>Outside</th>
             </tr>
@@ -139,11 +228,11 @@
                 <th>Temprature</th>
             </tr>
             <tr>
-                <td>0.00%</td>
-                <td>0.00C</td>
+                <td>51.80%</td>
+                <td>27.40C</td>
             </tr>
         </table>
-        <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;" class="center">
+        <table>
             <tr>
                 <th colspan=2>Soil</th>
             </tr>
@@ -152,26 +241,43 @@
                 <th>Temprature</th>
             </tr>
             <tr>
-                <td>100%</td>
-                <td>-127.00C</td>
+                <td>1%</td>
+                <td>25.31C</td>
             </tr>
         </table>
-
-        <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;" class="center">
+    </div>
+    <div class=center>
+        <!-- <table style="margin-top: 2% ;margin-bottom: 2%; width: 400px;">
             <tr>
                 <th colspan="2">Seed</th>
             </tr>
             <tr style="text-align: center;">
-                <th style="text-align: left;">
-                    <input type="radio" name="A"> <label>Cucumber</label><br>
-                    <input type="radio" name="A"> <label>Strawberry</label><br>
-                    <input type="radio" name="A"> <label>Tomato</label><br>
+                <th style="text-align: left;"> <input type="radio" name="A"> <label>Cucumber</label><br> <input
+                        type="radio" name="A"> <label>Strawberry</label><br> <input type="radio" name="A">
+                    <label>Tomato</label><br>
                 </th>
             </tr>
+        </table> -->
+
+        <table>
+            <tr>
+                <th colspan=4>Seed</th>
+            </tr>
+            <tr>
+                <th>Strawberry</th>
+                <th>Tomato</th>
+                <th>Cucumber</th>
+                <th>Peppers</th>
+            </tr>
+
+            <tr>
+                <td><a class="button button-on" href="/SW1on">N/A</a></td>
+                <td><a class="button button-on" href="/SW2on">N/A </a></td>
+                <td><a class="button button-on" href="/SW4on">N/A </a></td>
+                <td><a class="button button-on" href="/SW5on">N/A </a></td>
+            </tr>
         </table>
-        
-    
-        <table style="margin-top: 2% ;margin-bottom: 2%; ">
+        <table>
             <tr>
                 <th colspan=4>Relays Control</th>
             </tr>
@@ -188,9 +294,7 @@
                 <td><a class="button button-on" href="/SW5on">ON</a></td>
             </tr>
         </table>
-
-
-</div>
+    </div>
 </body>
 
 </html>
